@@ -5,12 +5,11 @@ function digitalRoot(n) {
     for (let i = 0; i < arr.length; i++) {
         sum += parseInt(arr[i]);
     }
-    if(sum<10){
-        return sum;
+    if(sum>9){
+        return digitalRoot(sum);
     }else {
-        console.log(sum);
-        digitalRoot(sum);
+        return sum;
     }
 }
 
-console.log(digitalRoot(132189));
+console.log(digitalRoot(493193));
